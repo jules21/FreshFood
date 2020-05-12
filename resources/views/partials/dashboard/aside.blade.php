@@ -9,8 +9,8 @@
              <li>
                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-food-apple"></i><span> Products <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span></a>
                 <ul class="submenu">
-                   <li><a href="{{-- route('products.create') --}}">Add New Item</a></li>
-                   <li><a href="{{-- route('products.index') --}}">View All</a></li>
+                   <li><a href="{{route('products.create')}}">Add New Item</a></li>
+                   <li><a href="{{route('products.index')}}">View All</a></li>
                 </ul>
              </li>
           </ul>
