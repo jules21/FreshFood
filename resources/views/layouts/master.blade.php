@@ -7,11 +7,11 @@
       <title>FreshFood - @yield('title')</title>
       <meta content="Admin Dashboard" name="description">
       <meta content="Themesbrand" name="author">
-      <link rel="shortcut icon" href="{{asset('dashboard/assets/images/favicon.ico')}}">
-      <link href="{{asset('dashboard/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-      <link href="{{asset('dashboard/assets/css/metismenu.min.css')}}" rel="stylesheet" type="text/css">
-      <link href="{{asset('dashboard/assets/css/icons.css')}}" rel="stylesheet" type="text/css">
-      <link href="{{asset('dashboard/assets/css/style.css')}}" rel="stylesheet" type="text/css">
+      <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+      <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+      <link href="{{asset('assets/css/metismenu.min.css')}}" rel="stylesheet" type="text/css">
+      <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css">
+      <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
    </head>
    <body>
       <!-- Begin page -->
@@ -59,14 +59,14 @@
       </div>
       <!-- END wrapper -->
       <!-- jQuery  -->
-      <script src="{{asset('dashboard/assets/js/jquery.min.js')}}"></script>
-      <script src="{{asset('dashboard/assets/js/bootstrap.bundle.min.js')}}">
-    </script><script src="{{asset('dashboard/assets/js/metisMenu.min.js')}}">
-    </script><script src="{{asset('dashboard/assets/js/jquery.slimscroll.js')}}">
-    </script><script src="{{asset('dashboard/assets/js/waves.min.js')}}"></script>
+      <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+      <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}">
+    </script><script src="{{asset('assets/js/metisMenu.min.js')}}">
+    </script><script src="{{asset('assets/js/jquery.slimscroll.js')}}">
+    </script><script src="{{asset('assets/js/waves.min.js')}}"></script>
     <script src="https://themesbrand.com/lexa/html/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
     <!-- App js -->
-    <script src="{{asset('dashboard/assets/js/app.js')}}"></script>
+    <script src="{{asset('assets/js/app.js')}}"></script>
     @yield('extra-js')
    </body>
 </html>
