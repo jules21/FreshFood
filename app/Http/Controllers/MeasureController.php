@@ -14,7 +14,8 @@ class MeasureController extends Controller
      */
     public function index()
     {
-        //
+        $measures = Measure::all();
+        return view('products.measures.index', \compact('measures'));
     }
 
     /**
@@ -24,7 +25,8 @@ class MeasureController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('products.measures.create');
     }
 
     /**
@@ -33,9 +35,10 @@ class MeasureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MeasureFormRequest $request)
     {
-        //
+        Measure::create($request->all());
+        return \redirect()->route('measures.index')->with('success', 'new Measure unit added');
     }
 
     /**

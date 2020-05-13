@@ -67,7 +67,7 @@
                    <a class="dropdown-item" href="{{ route('products.create') }}">New Product</a>
                     <a class="dropdown-item" href="{{ route('categories.create') }}">New Product Category</a>
                    <div class="dropdown-divider"></div>
-                   {{-- <a class="dropdown-item" href="#">Separated link</a> --}}
+                   <a class="dropdown-item" href="{{ route('measures.create') }}">new Measure Unit</a>
                 </div>
              </div>
           </li>
