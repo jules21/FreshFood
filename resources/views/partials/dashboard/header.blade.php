@@ -65,7 +65,7 @@
                 <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                    <a class="dropdown-item" href="{{ route('products.create') }}">New Product</a>
-                    <a class="dropdown-item" href="#">New Product Category</a>
+                    <a class="dropdown-item" href="{{ route('categories.create') }}">New Product Category</a>
                    <div class="dropdown-divider"></div>
                    {{-- <a class="dropdown-item" href="#">Separated link</a> --}}
                 </div>

@@ -20,3 +20,4 @@ Route::get('/dashboard', function () {
     return view('layouts.master');
 });
 Route::resource('/products', 'ProductController');
+Route::resource('/categories', 'CategoryController');
