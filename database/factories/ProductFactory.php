@@ -9,8 +9,8 @@ $factory->define(Product::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'category_id' => 1,
-        'unity_measure' => 'kg',
+        'measure_id' => '1',
         'quantity_per_unit' => 150,
-        'details' => Str::random(10),
+        'details' => $faker->address,
     ];
 });

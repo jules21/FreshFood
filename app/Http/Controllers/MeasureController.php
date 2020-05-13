@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProductFormRequest;
-use App\Models\Category;
 use App\Models\Measure;
-use App\Models\Price;
-use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class MeasureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('products.index', \compact('products'));
+        //
     }
 
     /**
@@ -29,10 +24,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $edit = false;
-        $measures = Measure::all();
-        $categories = Category::all();
-        return view('products.create', \compact('edit', 'measures', 'categories'));
+        //
     }
 
     /**
@@ -41,26 +33,18 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductFormRequest $request)
+    public function store(Request $request)
     {
-        $product = Product::create($request->except('product_price'));
-
-        Price::create([
-            'product_id' => $product->id,
-            'price' => $request->product_price,
-        ]);
-
-        return \redirect()->route('products.index')->with('success', 'Product added successfully');
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Measure  $measure
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Measure $measure)
     {
         //
     }
@@ -68,10 +52,10 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Measure  $measure
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Measure $measure)
     {
         //
     }
@@ -80,10 +64,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Measure  $measure
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Measure $measure)
     {
         //
     }
@@ -91,10 +75,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Measure  $measure
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Measure $measure)
     {
         //
     }

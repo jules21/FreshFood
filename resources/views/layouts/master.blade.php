@@ -12,6 +12,7 @@
       <link href="{{asset('assets/css/metismenu.min.css')}}" rel="stylesheet" type="text/css">
       <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css">
       <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
+      <link href="{{asset('assets/css/dataTables.bootstrap.min.css')}}" rel="stylesheet" type="text/css">
    </head>
    <body>
       <!-- Begin page -->
@@ -48,9 +49,11 @@
                      </div>
                   </div>
                   <!-- end row -->
+                  
+            @include('partials.dashboard.notification')
+                  @yield('content')
                </div>
                <!-- container-fluid -->
-               @yield('content')
             </div>
             <!-- content -->
             @include('partials.dashboard.footer')
@@ -59,6 +62,7 @@
       </div>
       <!-- END wrapper -->
       <!-- jQuery  -->
+      {{-- <script src="{{asset('assets/js/jquery-3.3.1.js')}}"></script> --}}
       <script src="{{asset('assets/js/jquery.min.js')}}"></script>
       <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}">
     </script><script src="{{asset('assets/js/metisMenu.min.js')}}">
@@ -67,6 +71,9 @@
     <script src="https://themesbrand.com/lexa/html/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
     <!-- App js -->
     <script src="{{asset('assets/js/app.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/js/dataTables.bootstrap.min.js') }}"></script>
     @yield('extra-js')
+    <script src="{{ asset('assets/pages/datatables.init.js') }}"></script>
    </body>
 </html>
