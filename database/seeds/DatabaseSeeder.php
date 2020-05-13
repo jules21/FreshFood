@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserSeeder::class);
         $this->call(CategoriesTableSeeder::class);
         $this->call(MeasureTableSeeder::class);
-        factory(App\Models\Product::class, 5)->create();
+        // factory(App\Models\Product::class, 5)->create();
 
     }
 }

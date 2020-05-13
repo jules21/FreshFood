@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
  */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,3 +21,5 @@ Route::get('/dashboard', function () {
 Route::resource('/products', 'ProductController');
 Route::resource('/categories', 'CategoryController');
 Route::resource('/measures', 'MeasureController');
+
+Route::resource('/products/{product}/uploads', 'UploadController');
