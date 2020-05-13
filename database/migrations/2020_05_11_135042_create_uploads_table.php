@@ -17,7 +17,7 @@ class CreateUploadsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('product_id');
             $table->string('name');
-            $table->string('source');
+            // $table->string('source');
             $table->timestamps();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });

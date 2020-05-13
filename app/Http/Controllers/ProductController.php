@@ -50,7 +50,7 @@ class ProductController extends Controller
             'price' => $request->product_price,
         ]);
 
-        return \redirect()->route('products.index')->with('success', 'Product added successfully');
+        return \redirect()->route('uploads.create', $product)->with('success', 'add product Photo');
 
     }
 

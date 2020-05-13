@@ -16,4 +16,8 @@ class Product extends Model
     {
         return $this->hasOne('App\Models\Price', 'product_id');
     }
+    public function photos()
+    {
+        return $this->hasMany('App\Models\Upload');
+    }
 }

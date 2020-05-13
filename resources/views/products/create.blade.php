@@ -15,7 +15,7 @@
                 <div class="form-group row">
                     <label for="product-name" class="col-sm-2 col-form-label">Product Name</label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" placeholder="Enter Product Name" name="name"
+                        <input class="form-control" type="text" placeholder="Enter Product Name" name="name" value="{{old('name')}}"
                             id="product-name">
                     </div>
                 </div>
@@ -32,14 +32,14 @@
                 <div class="form-group row">
                     <label for="product-quantiy" class="col-sm-2 col-form-label">Quantity per unit</label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" placeholder="Enter Product Quantity" name="quantity_per_unit"
+                        <input class="form-control" type="text" placeholder="Enter Product Quantity" name="quantity_per_unit" value="{{old('quantity_per_unit')}}"
                             id="product-quantity">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="product-quantiy" class="col-sm-2 col-form-label">Price per unit</label>
                     <div class="col-sm-10 input-group">
-                        <input class="form-control" type="number" min="0" placeholder="Enter Product Price" name="product_price"
+                        <input class="form-control" type="number" min="0" placeholder="Enter Product Price" name="product_price" value="{{old('product_price')}}"
                             id="product-quantity">
                             <div class="input-group-append">
                                 <span class="input-group-text">RWF</span>
