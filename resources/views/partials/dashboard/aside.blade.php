@@ -9,8 +9,22 @@
              <li>
                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-food-apple"></i><span> Products <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span></a>
                 <ul class="submenu">
-                   <li><a href="{{-- route('products.create') --}}">Add New Item</a></li>
-                   <li><a href="{{-- route('products.index') --}}">View All</a></li>
+                   <li><a href="{{route('products.create')}}">Add New Item</a></li>
+                   <li><a href="{{route('products.index')}}">View All</a></li>
+                   <li>
+                     <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted-type"></i><span> categories <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span></a>
+                     <ul class="submenu">
+                        <li><a href="{{route('categories.create')}}">Add New Category</a></li>
+                        <li><a href="{{route('categories.index')}}">View All</a></li>
+                     </ul>
+                  </li>
+                   <li>
+                     <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-scale-balance"></i><span> Measument <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span></a>
+                     <ul class="submenu">
+                        <li><a href="{{route('measures.create')}}">Add New unit</a></li>
+                        <li><a href="{{route('measures.index')}}">View All</a></li>
+                     </ul>
+                  </li>
                 </ul>
              </li>
           </ul>

@@ -10,6 +10,10 @@ class Product extends Model
 
     public function category()
     {
-        $this->belongsTo('App/Models/Category');
+        return $this->belongsTo('App\Models\Category');
+    }
+    public function price()
+    {
+        return $this->hasOne('App\Models\Price', 'product_id');
     }
 }

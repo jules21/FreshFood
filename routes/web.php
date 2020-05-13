@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('layouts.master');
 });
+Route::resource('/products', 'ProductController');
+Route::resource('/categories', 'CategoryController');
+Route::resource('/measures', 'MeasureController');
