@@ -31,13 +31,18 @@ alert not product found!
                         @foreach ($products as $product)
                         <tr>
                                 <td>{{$product->id}}</td>
-                                <td><a href="{{ route('products.show', $product->id) }}">{{$product->name}}</a></td>
+                                <td><a href="{{ route('uploads.show', $product->id) }}">{{$product->name}}</a></td>
                                 <td>{{$product->category->name}}</td>
                                 <td>{{$product->quantity_per_unit}}</td>
                                 <td>{{$product->price['price']}}</td>
                                 <td>{{$product->unity_measure}}</td>
                             <td>{{$product->details}}</td>
-                            <td><img src="{{ asset('photos/'.$product->Photos[0]['name']) }}" width="100" alt="photo"></td>
+                            <td>
+                            @if (count($product->Photos))
+                                <img src="{{ asset('photos/'.$product->Photos[0]['name']) }}" width="100" alt="photo">
+                            @endif
+                            </td>    
+                            {{-- <td>{{  }}</td> --}}
                         </tr>
                     @endforeach
                     </tbody>

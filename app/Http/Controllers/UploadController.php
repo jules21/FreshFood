@@ -60,9 +60,11 @@ class UploadController extends Controller
      * @param  \App\Models\Upload  $upload
      * @return \Illuminate\Http\Response
      */
-    public function show(Upload $upload)
+    public function show($upload)
     {
-        //
+        $product = Product::find($upload);
+        $photos = Upload::where('product_id', $product->id)->get();
+        return view('products.uploads.show', \compact('photos', 'product'));
     }
 
     /**
@@ -94,36 +96,15 @@ class UploadController extends Controller
      * @param  \App\Models\Upload  $upload
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Upload $upload)
+    public function destroy($upload)
     {
-        //
-    }
-    public function post_upload()
-    {
+        $photo = Upload::find($upload);
+        $old_path = 'photos/' . $photo->name;
 
-        $input = Input::all();
-        $rules = array(
-            'file' => 'image|max:3000',
-        );
-
-        $validation = Validator::make($input, $rules);
-
-        if ($validation->fails()) {
-            return Response::make($validation->errors->first(), 400);
+        if (file_exists($old_path)) {
+            unlink($old_path);
         }
-
-        $file = Input::file('file');
-
-        $extension = File::extension($file['name']);
-        $directory = path('public') . 'uploads/' . sha1(time());
-        $filename = sha1(time() . time()) . ".{$extension}";
-
-        $upload_success = Input::upload('file', $directory, $filename);
-
-        if ($upload_success) {
-            return Response::json('success', 200);
-        } else {
-            return Response::json('error', 400);
-        }
+        $photo->delete();
+        return \redirect()->back()->with('success', 'photo deleted successful');
     }
 }

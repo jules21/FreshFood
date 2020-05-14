@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MeasureFormRequest;
 use App\Models\Measure;
 use Illuminate\Http\Request;
 
