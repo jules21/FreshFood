@@ -9,7 +9,7 @@
                 <h4 class="mt-0 header-title">Create New Measurent</h4>
                 <p class="text-muted m-b-30">Please fill the form below in order to have product Measure unit added in system.</p>
                         {{-- input fields --}}
-                <form action="{{ route('categories.store') }}" method="post">
+                <form action="{{ route('measures.store') }}" method="post">
                     @csrf
                 @method('POST')
                 <div class="form-group row">

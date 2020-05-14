@@ -62,7 +62,9 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+
+        $products = Product::find($product->id);
+        return view('products.uploads.show', \compact('products'));
     }
 
     /**
