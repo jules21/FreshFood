@@ -32,3 +32,8 @@ Route::get('/products/{product}/uploads', 'UploadController@create')->name('uplo
 Route::post('/uploads{product}', 'UploadController@store')->name('uploads.store');
 Route::get('/products/{product}/photos', 'UploadController@show')->name('uploads.show');
 Route::delete('/products/{product}/uploads', 'UploadController@destroy')->name('uploads.destroy');
+
+Route::get('/', 'freshFoodPages@home');
+Route::get('/shop', 'freshFoodPages@shop');
+Route::get('/contact_us', 'freshFoodPages@contact');
+Route::get('/about_us','freshFoodPages@about');
